@@ -1,0 +1,41 @@
+# Hệ thống Đăng ký - Đăng nhập và Quản lý Ví điểm thưởng
+
+## Thành viên nhóm
+
+- [Tên thành viên 1] – Lập trình chính
+- [Tên thành viên 2] – Thiết kế và thử nghiệm
+- [Tên thành viên 3] – Kiểm thử và tài liệu
+- ...
+
+## Mô tả dự án
+
+Dự án xây dựng hệ thống đăng ký, đăng nhập người dùng và quản lý ví điểm thưởng.  
+Chức năng chính bao gồm:
+
+- Đăng ký tài khoản người dùng với bảo mật mật khẩu (hash SHA256).
+- Đăng nhập và xác thực người dùng.
+- Quản lý ví điểm thưởng riêng cho từng tài khoản.
+- Cho phép đổi mật khẩu, chuyển điểm giữa các tài khoản.
+- Xác thực giao dịch và đổi mật khẩu bằng OTP (mã xác thực một lần).
+- Lưu trữ và đọc dữ liệu người dùng từ file để đảm bảo dữ liệu không mất khi thoát chương trình.
+- Giao diện dòng lệnh đơn giản, dễ sử dụng.
+
+## Công nghệ sử dụng
+
+- Ngôn ngữ C++ với chuẩn C++17.
+- Thư viện OpenSSL để mã hóa mật khẩu SHA256.
+- Hệ thống OTP được sinh ngẫu nhiên và kiểm tra thời gian hiệu lực.
+- Quản lý file dữ liệu dạng text lưu trữ thông tin tài khoản và ví điểm.
+- Sử dụng Git để quản lý mã nguồn.
+
+## Hướng dẫn sử dụng
+
+### Cài đặt môi trường
+
+- Cài đặt trình biên dịch C++ (Visual Studio, MinGW, GCC...).
+- Cài đặt OpenSSL (nếu có) để hỗ trợ hàm SHA256.
+
+### Biên dịch
+
+```bash
+g++ main.cpp UserAccount.cpp Wallet.cpp Transaction.cpp OTPManager.cpp UserManager.cpp -o RewardSystem -std=c++17 -lssl -lcrypto
